@@ -18,11 +18,8 @@ namespace C01_NumberGuesser
             Console.Title = "NumberGuesser.Console | by RayuDW";
 
             int randomNumber = GenerateRandomNumber();
-            
-            Console.WriteLine("Enter a number between 0 and 100:");
-            Console.Write("> ");
-            
-            string numberGuess = Console.ReadLine();
+            string numberGuess = AskForNumberInput();
+
             bool conversionResult = Int16.TryParse(numberGuess, out short number);
             
             if (conversionResult)
@@ -60,6 +57,15 @@ namespace C01_NumberGuesser
             Console.WriteLine($"DEBUG: The drawn number is {randomNumber}!!");
 
             return randomNumber;
+        }
+
+        private static string AskForNumberInput()
+        {
+            Console.WriteLine("Enter a number between 0 and 100:");
+            Console.Write("> ");
+            
+            string numberGuess = Console.ReadLine();
+            return numberGuess;
         }
     }
 }
