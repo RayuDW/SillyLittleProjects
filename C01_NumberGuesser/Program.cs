@@ -22,6 +22,8 @@ namespace C01_NumberGuesser
 
             while (!hasGuessedNumber)
             {
+                // Asks the user to input a number while the number does not match the random generated one.
+                // If the user does not enter a number, a error message will be shown and the user gets asked to input a number.
                 string numberGuess = AskForNumberInput();
                 var conversionResult = Int16.TryParse(numberGuess, out short number);
                 Console.Clear();
@@ -59,7 +61,7 @@ namespace C01_NumberGuesser
 
         private static int GenerateRandomNumber()
         {
-            // Generate a random number between 0 and 100
+            // Generate a random number between 0 and 100 and return it.
             Random rng = new Random();
             int randomNumber = rng.Next(0, 101);
 
@@ -68,6 +70,7 @@ namespace C01_NumberGuesser
 
         private static string AskForNumberInput()
         {
+            // Asks the user to input a number, which will get returned.
             Console.WriteLine("Enter a number between 0 and 100:");
             Console.Write("> ");
 
