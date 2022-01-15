@@ -18,35 +18,43 @@ namespace C01_NumberGuesser
             Console.Title = "NumberGuesser.Console | by RayuDW";
 
             int randomNumber = GenerateRandomNumber();
-            string numberGuess = AskForNumberInput();
+            bool hasGuessedNumber = false;
 
-            bool conversionResult = Int16.TryParse(numberGuess, out short number);
-            
-            if (conversionResult)
+            while (!hasGuessedNumber)
             {
-                if (number < randomNumber)
-                {
-                    Console.WriteLine("Try a higher number!");
-                }
+                string numberGuess = AskForNumberInput();
+                var conversionResult = Int16.TryParse(numberGuess, out short number);
+                Console.Clear();
                 
-                else if (number > randomNumber)
+                if (conversionResult)
                 {
-                    Console.WriteLine("Try a lower number!");
+                    if (number < randomNumber)
+                    {
+                        Console.WriteLine("Try a higher number!");
+                    }
+
+                    else if (number > randomNumber)
+                    {
+                        Console.WriteLine("Try a lower number!");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("That's the number!!");
+                        hasGuessedNumber = true;
+                        Console.WriteLine("> Press any key to exit!");
+                    }
                 }
 
                 else
                 {
-                    Console.WriteLine("That's the number!!");
+                    // Fallback if input cannot be converted into a number
+                    Console.WriteLine($"ERROR: Could not convert '{numberGuess}'!");
                 }
-            }
-
-            else
-            {
-                // Fallback if input cannot be converted into a number
-                Console.WriteLine($"ERROR: Could not convert '{numberGuess}'!");
             }
             
             Console.ReadKey();
+            Environment.Exit(0);
         }
 
         private static int GenerateRandomNumber()
@@ -63,7 +71,7 @@ namespace C01_NumberGuesser
         {
             Console.WriteLine("Enter a number between 0 and 100:");
             Console.Write("> ");
-            
+
             string numberGuess = Console.ReadLine();
             return numberGuess;
         }
