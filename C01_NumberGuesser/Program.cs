@@ -17,10 +17,7 @@ namespace C01_NumberGuesser
 
             Console.Title = "NumberGuesser.Console | by RayuDW";
 
-            // Generate a random number between 0 and 100
-            Random rng = new Random();
-            int randomNumber = rng.Next(0, 101);
-            Console.WriteLine($"DEBUG: The drawn number is {randomNumber}!!");
+            int randomNumber = GenerateRandomNumber();
             
             Console.WriteLine("Enter a number between 0 and 100:");
             Console.Write("> ");
@@ -45,8 +42,24 @@ namespace C01_NumberGuesser
                     Console.WriteLine("That's the number!!");
                 }
             }
+
+            else
+            {
+                // Fallback if input cannot be converted into a number
+                Console.WriteLine($"ERROR: Could not convert '{numberGuess}'!");
+            }
             
             Console.ReadKey();
+        }
+
+        private static int GenerateRandomNumber()
+        {
+            // Generate a random number between 0 and 100
+            Random rng = new Random();
+            int randomNumber = rng.Next(0, 101);
+            Console.WriteLine($"DEBUG: The drawn number is {randomNumber}!!");
+
+            return randomNumber;
         }
     }
 }
