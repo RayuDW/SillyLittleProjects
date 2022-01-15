@@ -62,7 +62,6 @@ namespace C01_NumberGuesser
             // Generate a random number between 0 and 100
             Random rng = new Random();
             int randomNumber = rng.Next(0, 101);
-            Console.WriteLine($"DEBUG: The drawn number is {randomNumber}!!");
 
             return randomNumber;
         }
