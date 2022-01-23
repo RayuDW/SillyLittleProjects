@@ -27,17 +27,22 @@ namespace C01_NumberGuesser
                 string numberGuess = AskForNumberInput();
                 var conversionResult = Int16.TryParse(numberGuess, out short number);
                 Console.Clear();
-                
+
                 if (conversionResult)
                 {
-                    if (number < randomNumber)
+                    if (Math.Abs(number - randomNumber) <= 5)
                     {
-                        Console.WriteLine("Try a higher number!");
+                        Console.WriteLine("You're close!!");
                     }
 
-                    else if (number > randomNumber)
+                    if (number > randomNumber)
                     {
                         Console.WriteLine("Try a lower number!");
+                    }
+                    
+                    else if (number < randomNumber)
+                    {
+                        Console.WriteLine("Try a higher number!");
                     }
 
                     else
@@ -54,7 +59,7 @@ namespace C01_NumberGuesser
                     Console.WriteLine($"ERROR: Could not convert '{numberGuess}'!");
                 }
             }
-            
+
             Console.ReadKey();
             Environment.Exit(0);
         }
