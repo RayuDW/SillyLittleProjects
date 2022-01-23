@@ -30,26 +30,29 @@ namespace C01_NumberGuesser
 
                 if (conversionResult)
                 {
-                    if (Math.Abs(number - randomNumber) <= 5)
+                    if (number <= 100)
                     {
-                        Console.WriteLine("You're close!!");
-                    }
+                        if (Math.Abs(number - randomNumber) <= 5)
+                        {
+                            Console.WriteLine("You're close!!");
+                        }
 
-                    if (number > randomNumber)
-                    {
-                        Console.WriteLine("Try a lower number!");
-                    }
+                        if (number > randomNumber)
+                        {
+                            Console.WriteLine("Try a lower number!");
+                        }
                     
-                    else if (number < randomNumber)
-                    {
-                        Console.WriteLine("Try a higher number!");
-                    }
+                        else if (number < randomNumber)
+                        {
+                            Console.WriteLine("Try a higher number!");
+                        }
 
-                    else
-                    {
-                        Console.WriteLine("That's the number!!");
-                        hasGuessedNumber = true;
-                        Console.WriteLine("> Press any key to exit!");
+                        else
+                        {
+                            Console.WriteLine("That's the number!!");
+                            hasGuessedNumber = true;
+                            Console.WriteLine("> Press any key to exit!");
+                        }
                     }
                 }
 
