@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C01_NumberGuesser", "C01_NumberGuesser\C01_NumberGuesser.csproj", "{6AF28545-F496-4C69-838C-802290DA5AB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGuesser", "NumberGuesser\NumberGuesser.csproj", "{5EB20EED-37C3-4207-BD34-2D6873DB3CDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6AF28545-F496-4C69-838C-802290DA5AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AF28545-F496-4C69-838C-802290DA5AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AF28545-F496-4C69-838C-802290DA5AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AF28545-F496-4C69-838C-802290DA5AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB20EED-37C3-4207-BD34-2D6873DB3CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB20EED-37C3-4207-BD34-2D6873DB3CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB20EED-37C3-4207-BD34-2D6873DB3CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB20EED-37C3-4207-BD34-2D6873DB3CDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
