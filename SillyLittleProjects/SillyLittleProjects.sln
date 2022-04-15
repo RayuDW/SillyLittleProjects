@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGuesser", "NumberGuesser\NumberGuesser.csproj", "{575167F4-992A-45A6-9257-43313BCAE57C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitConverter.Console", "UnitConverter.Console\UnitConverter.Console.csproj", "{9FC40F11-0200-4ABF-A630-47E6B5B22E25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{575167F4-992A-45A6-9257-43313BCAE57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{575167F4-992A-45A6-9257-43313BCAE57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{575167F4-992A-45A6-9257-43313BCAE57C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FC40F11-0200-4ABF-A630-47E6B5B22E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FC40F11-0200-4ABF-A630-47E6B5B22E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FC40F11-0200-4ABF-A630-47E6B5B22E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FC40F11-0200-4ABF-A630-47E6B5B22E25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
